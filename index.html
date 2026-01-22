@@ -4,35 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First HTML Page</title>
+
+    <style>
+        body {
+            background-color: #fff6f0;
+            color: #3b1f1f;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 75px;
+        }
+
+        h2 {
+            font-size: 40px;
+            color: rgb(122, 44, 63);
+        }
+
+        h3 {
+            font-size: 26px;
+            color: rgb(92, 32, 48);
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        #ar1 {
+            color: rgb(159, 110, 51);
+            font-size: 18px;
+            background-color: #fff1dc;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        #ar2 {
+            color: rgb(222, 170, 107);
+            font-size: 18px;
+            background-color: #fff7e8;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        img {
+            float: right;
+            margin-left: 40px;
+            margin-top: 10px;
+            border-radius: 15px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            font-size: 20px;
+            color: rgb(185, 54, 85);
+            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: rgb(92, 10, 10);
+            text-decoration: underline;
+        }
+
+        section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            font-size: 18px;
+            border-collapse: collapse;
+            background-color: #fffaf5;
+        }
+
+        th {
+            background-color: rgb(185, 54, 85);
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        form {
+            font-size: 18px;
+        }
+
+        input, select, textarea {
+            font-size: 16px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 8px 15px;
+            border-radius: 8px;
+            border: none;
+            background-color: rgb(185, 54, 85);
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(92, 10, 10);
+        }
+
+        footer h1 {
+            text-align: center;
+            font-size: 40px;
+            color: rgb(92, 10, 10);
+        }
+    </style>
 </head>
+
 <body>
     <header>
-    <h1>Hitesh Kumari</h1>
-    <p>This is my Portfolio.</p>
-    <img src="cat.jpg" alt="Hitesh" height=" 100" width="100"img>
+        <h1 class="main1" style="color: rgb(185, 54, 85); text-align: center;">Hitesh Kumari</h1>
+        <p>This is my Portfolio.</p>
+        <img src="cat.jpg" alt="Hitesh" height="250" width="250">
     </header>
+
     <hr>
 
     <nav>
-     <a href=" github.com">GITHUB</a>
-     <a href=" leetcode.com">Leetcode</a>
-     <a href=" linkedin.com">LinkedIn</a>
+        <a href="github.com">GITHUB</a>
+        <a href="leetcode.com">Leetcode</a>
+        <a href="linkedin.com">LinkedIn</a>
     </nav>
+
     <hr>
 
-    <section>
+    <section style="margin: 20mx;">
         <h2>Project</h2>
-        <article>
-            <h3>Chess Enigma<a href="Github.link">Github Link</a></h3>
-            
-            <p> Uses Chess board to encode the messages</p>
+
+        <article id="ar1">
+            <h3>Chess Enigma <a href="Github.link">Github Link</a></h3>
+            <p>Uses Chess board to encode the messages</p>
         </article>
-        <article>
-            <h3>Intern Management system<a href="Github.lnk">Github Link</a></h3>
+
+        <article id="ar2">
+            <h3>Intern Management system <a href="Github.lnk">Github Link</a></h3>
             <p>Intern Management</p>
         </article>
     </section>
+
     <hr>
+
     <section>
         <h2>Skills</h2>
         <ol type="I">
@@ -41,9 +169,10 @@
             <li>HTML</li>
             <li>Python</li>
         </ol>
-        
     </section>
+
     <hr>
+
     <section>
         <h2>Education</h2>
         <table border="3">
@@ -57,10 +186,9 @@
                 </tr>
             </thead>
 
-
             <tbody>
                 <tr>
-                    <td> Btech</td>
+                    <td>Btech</td>
                     <td>CSE</td>
                     <td>2028</td>
                     <td>CU</td>
@@ -83,31 +211,32 @@
             </tbody>
         </table>
     </section>
+
     <section>
-        <h2>Contact me</h2>
-        <form>
+        <h2 style="font-size: 50px;">Contact me</h2>
+        <form style="color: rgb(103, 48, 9); font-weight: bolder;">
             <label for="name">Enter your name</label>
-            <input type="text"id="name" name="username" required/><br><br>
+            <input type="text" id="name" name="username" required><br><br>
 
-            <label for ="em">Enter your Email</label>
-            <input type="email"id="em" name="email" required/><br><br>
+            <label for="em">Enter your Email</label>
+            <input type="email" id="em" name="email" required><br><br>
 
-            <label for ="reason">Reason of contact</label>
-            <select id="reason" >
+            <label for="reason">Reason of contact</label>
+            <select id="reason">
                 <option value="">--select an option</option>
-            <option value ="job">Job Opportunity</option>
-            <option value ="intership">Internship</option>
-            <option value ="freelance">Freelancing</option>
-
-            </select>
+                <option value="job">Job Opportunity</option>
+                <option value="intership">Internship</option>
+                <option value="freelance">Freelancing</option>
+            </select><br><br>
 
             <label for="feedback">Give your feedback</label>
-            <textarea id ="feedback"></textarea><br><br>
-            <button >Submit</button>
+            <textarea id="feedback"></textarea><br><br>
+
+            <button>Submit</button>
         </form>
     </section>
-
 </body>
+
 <footer>
     <h1>Thankyou!!</h1>
 </footer>
